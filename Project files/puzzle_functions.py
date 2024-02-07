@@ -120,3 +120,20 @@ def get_current_player(player_one_turn: bool) -> str:
 
 # Now complete the functions:
 #   get_winner, get_factor, reverse, get_row, get_points and check_guess
+
+
+def get_winner(player_one_score: int, player_two_score: int) -> str:
+    """Return the result of the game, Either Tie or a Winner
+
+    >>> if player_one_score > player_two_score:
+            "Player one wins"
+    >>> if player_one_score < player_two_score:
+            "Player two wins"
+    >>> if player_one_score == player_two_score:
+            "TIE"
+    """
+    if player_one_score > player_two_score:
+        return P1_WINS
+    elif player_one_score < player_two_score:
+        return P2_WINS
+    return TIE
