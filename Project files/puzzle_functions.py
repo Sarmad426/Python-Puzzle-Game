@@ -10,10 +10,10 @@
 
 # Constants that describe the valid directions.  These should be used
 # in functions get_factor and check_guess.
-UP = 'up'
-DOWN = 'down'
-FORWARD = 'forward'
-BACKWARD = 'backward'
+UP = "up"
+DOWN = "down"
+FORWARD = "forward"
+BACKWARD = "backward"
 
 # Constants that describe the multiplicative factor used when scoring a
 # word in a particular direction.  This should be used in function get_factor.
@@ -30,15 +30,15 @@ BONUS = 12
 # Constants that describe the two players and the result of the game.  These
 # should be used as return values in functions get_current_player and
 # get_winner.
-P1 = 'player one'
-P2 = 'player two'
-P1_WINS = 'player one wins'
-P2_WINS = 'player two wins'
-TIE = 'tie game'
+P1 = "player one"
+P2 = "player two"
+P1_WINS = "player one wins"
+P2_WINS = "player two wins"
+TIE = "tie game"
 
 # Constants that describe which puzzle to play.  Replace the 'puzzle1.txt' with
 # any other puzzle file (e.g., 'puzzle2.txt') to play a different game.
-PUZZLE_FILE = 'puzzle1.txt'
+PUZZLE_FILE = "puzzle1.txt"
 
 
 # Helper functions.
@@ -59,8 +59,8 @@ def get_column(puzzle: str, col_num: int) -> str:
     'aei'
     """
 
-    puzzle_list = puzzle.strip().split('\n')
-    column = ''
+    puzzle_list = puzzle.strip().split("\n")
+    column = ""
     for row in puzzle_list:
         column = column + row[col_num]
 
@@ -79,7 +79,7 @@ def get_row_length(puzzle: str) -> int:
     2
     """
 
-    return len(puzzle.split('\n')[0])
+    return len(puzzle.split("\n")[0])
 
 
 def string_contains(text1: str, text2: str) -> bool:
