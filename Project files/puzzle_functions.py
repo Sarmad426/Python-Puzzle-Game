@@ -216,3 +216,31 @@ def get_points(direction: str, words_left: int) -> int:
     elif words_left < THRESHOLD:
         return (2 * THRESHOLD - 3) * (BACKWARD_FACTOR)
     return (2 * THRESHOLD - 1) * BACKWARD_FACTOR + BONUS
+
+
+def check_guess(
+    puzzle: str,
+    direction: str,
+    word_guessed: str,
+    row_or_column_number: int,
+    words_left: int,
+) -> int:
+    """
+    Returns the points if the guess is correct and at correct row or column position and direction is accurate
+
+    Args:
+    - puzzle (str): Puzzle of Words
+    - direction (str): Direction of the guessed word
+    - word_guessed (str) : Player guess
+    - row_or_column_number (int): Number of row or column
+    - words_left (int): Number of word left to be guessed
+
+    Returns:
+        if guess is correct and at correct row or column position:
+            return points
+        Otherwise,
+            return 0
+    """
+    if word_guessed in puzzle and get_row(puzzle, row_or_column_number):
+        return get_points(direction, words_left)
+    return 0
