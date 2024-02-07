@@ -113,7 +113,9 @@ def get_current_player(player_one_turn: bool) -> str:
     >>> get_current_player(False)
     'player two'
     """
-
+    if player_one_turn:
+        return "player one"
+    return "player two"
     # Complete this function.
 
 
