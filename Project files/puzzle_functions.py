@@ -167,3 +167,19 @@ def get_factor(direction: str) -> int:
         return BACKWARD_FACTOR
 
     return UP_FACTOR
+
+
+def reverse(text: str) -> str:
+    """
+    Reverse the input string
+
+    Args:
+        input_string (str): The string to be reversed.
+
+    Returns:
+        str: The reversed string.
+    """
+    reverse_str = ""
+    for i in range(len(text) - 1, -1, -1):
+        reverse_str += text[i]
+    return reverse_str
