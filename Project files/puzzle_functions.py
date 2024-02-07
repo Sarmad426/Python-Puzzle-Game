@@ -126,8 +126,8 @@ def get_winner(player_one_score: int, player_two_score: int) -> str:
     """Return the result of the game, Either Tie or a Winner
 
     Args:
-    player_one_score (int): Player one score
-    player_two_score (int): Player two score
+    - player_one_score (int): Player one score
+    - player_two_score (int): Player two score
 
     >>> if player_one_score > player_two_score:
             "Player one wins"
@@ -174,12 +174,27 @@ def reverse(text: str) -> str:
     Reverse the input string
 
     Args:
-        input_string (str): The string to be reversed.
+        - input_string (str): The string to be reversed.
 
     Returns:
-        str: The reversed string.
+        - str: The reversed string.
     """
     reverse_str = ""
     for i in range(len(text) - 1, -1, -1):
         reverse_str += text[i]
     return reverse_str
+
+
+def get_row(puzzle: str, row_number: int) -> str:
+    """
+    Returns 4 letters in specific row of the puzzle.
+
+    Args:
+    - puzzle (str): Puzzle text.
+    - row_number (int): Row number
+
+    Returns:
+    - str: Letters in the specified row, excluding newline character.
+    """
+    puzzle_list: list[str] = puzzle.strip().split("\n")
+    return puzzle_list[row_number]
