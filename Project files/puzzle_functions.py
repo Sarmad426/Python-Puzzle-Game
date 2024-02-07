@@ -137,3 +137,26 @@ def get_winner(player_one_score: int, player_two_score: int) -> str:
     elif player_one_score < player_two_score:
         return P2_WINS
     return TIE
+
+
+def get_factor(direction: str) -> int:
+    """
+    Returns the Direction factor
+
+    >>> if direction == 'forward'
+            return 1
+    >>> if direction == 'down'
+            return 2
+    >>> if direction == 'backward'
+            return 3
+    >>> Otherwise,
+            return 4
+    """
+    if direction == FORWARD:
+        return FORWARD_FACTOR
+    elif direction == DOWN:
+        return DOWN_FACTOR
+    if direction == BACKWARD:
+        return BACKWARD_FACTOR
+
+    return UP_FACTOR
