@@ -116,7 +116,6 @@ def get_current_player(player_one_turn: bool) -> str:
     if player_one_turn:
         return "player one"
     return "player two"
-    # Complete this function.
 
 
 # Now complete the functions:
