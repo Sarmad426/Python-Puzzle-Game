@@ -125,6 +125,10 @@ def get_current_player(player_one_turn: bool) -> str:
 def get_winner(player_one_score: int, player_two_score: int) -> str:
     """Return the result of the game, Either Tie or a Winner
 
+    Args:
+    player_one_score (int): Player one score
+    player_two_score (int): Player two score
+
     >>> if player_one_score > player_two_score:
             "Player one wins"
     >>> if player_one_score < player_two_score:
@@ -142,6 +146,9 @@ def get_winner(player_one_score: int, player_two_score: int) -> str:
 def get_factor(direction: str) -> int:
     """
     Returns the Direction factor
+
+    Args:
+        direction (str): The direction of the word
 
     >>> if direction == 'forward'
             return 1
