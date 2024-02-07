@@ -198,3 +198,21 @@ def get_row(puzzle: str, row_number: int) -> str:
     """
     puzzle_list: list[str] = puzzle.strip().split("\n")
     return puzzle_list[row_number]
+
+
+def get_points(direction: str, words_left: int) -> int:
+    """
+    Returns the points earned for finding a word in a specific direction.
+
+    Args:
+    - direction (str):
+    - words_left (int): Number of words left before this guess.
+
+    Returns:
+    - int: Points earned for finding a word in the given direction.
+    """
+    if words_left >= THRESHOLD:
+        return THRESHOLD * get_factor(direction)
+    elif words_left < THRESHOLD:
+        return (2 * THRESHOLD - 3) * (BACKWARD_FACTOR)
+    return (2 * THRESHOLD - 1) * BACKWARD_FACTOR + BONUS
